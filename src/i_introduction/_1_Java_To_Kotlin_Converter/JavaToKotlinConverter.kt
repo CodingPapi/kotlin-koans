@@ -13,5 +13,13 @@ fun todoTask1(collection: Collection<Int>): Nothing = TODO(
 
 
 fun task1(collection: Collection<Int>): String {
-    todoTask1(collection)
+//    todoTask1(collection)
+    var tempString = "{"
+    for (i in collection) {
+        tempString += i.toString() + ", "
+    }
+    tempString = tempString.dropLast(2)
+    tempString += "}"
+    return tempString
+
 }
