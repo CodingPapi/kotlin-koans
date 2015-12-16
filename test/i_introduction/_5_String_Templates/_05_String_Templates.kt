@@ -7,6 +7,8 @@ import java.util.regex.Pattern
 
 class _05_String_Templates() {
     @Test fun match() {
+        println(Pattern.compile(task5()))
+
         Assert.assertTrue(Pattern.compile(task5()).matcher("Douglas Adams (11 MAR 1952)").find())
     }
 
