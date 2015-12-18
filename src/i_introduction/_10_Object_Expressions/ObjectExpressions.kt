@@ -17,6 +17,16 @@ fun todoTask10(): Nothing = TODO(
 
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
+    Collections.sort(arrayList, { t1, t2 -> if(t1 == t2) 0 else if(t1 > t2) -1 else 1 })
+    Collections.sort(arrayList, object: Comparator<Int> {
+        override fun compare(lhs: Int?, rhs: Int?): Int {
+            return if (lhs != null && rhs != null) {
+                if (lhs == rhs) 0 else if (lhs > rhs) -1 else 0
+            } else {
+                throw UnsupportedOperationException()
+            }
+        }
+    })
     return arrayList
+
 }

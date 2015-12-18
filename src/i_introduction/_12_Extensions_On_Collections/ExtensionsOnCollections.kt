@@ -14,9 +14,13 @@ fun todoTask12(): Nothing = TODO(
     """,
     documentation = doc12()
 )
+fun MutableList<Int>.sortedDescending(): MutableList<Int> {
+    sortWith(comparator { t1, t2 -> if (t1 == t2) 0 else if (t1 > t2) -1 else 1 }/*{t1, t2 -> 0})*/)
+    return this
+}
 
 fun task12(): List<Int> {
-    todoTask12()
-    return arrayListOf(1, 5, 2)
+//    todoTask12()
+    return arrayListOf(1, 5, 2).sortedDescending()
 }
 
