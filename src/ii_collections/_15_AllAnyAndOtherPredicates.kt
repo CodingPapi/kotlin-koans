@@ -1,5 +1,7 @@
 package ii_collections
 
+import ii_collections.data.shop
+
 fun example2(list: List<Int>) {
 
     val isZero: (Int) -> Boolean = { it == 0 }
@@ -15,25 +17,30 @@ fun example2(list: List<Int>) {
 
 fun Customer.isFrom(city: City): Boolean {
     // Return true if the customer is from the given city
-    todoCollectionTask()
+//    todoCollectionTask()
+    return this.city.equals(city)
 }
 
 fun Shop.checkAllCustomersAreFrom(city: City): Boolean {
     // Return true if all customers are from the given city
-    todoCollectionTask()
+//    todoCollectionTask()
+    return this.customers.map { it.city }.all { city.equals(it) }
 }
 
 fun Shop.hasCustomerFrom(city: City): Boolean {
     // Return true if there is at least one customer from the given city
-    todoCollectionTask()
+//    todoCollectionTask()
+    return this.customers.map { it.city }.any { city.equals(it) }
 }
 
 fun Shop.countCustomersFrom(city: City): Int {
     // Return the number of customers from the given city
-    todoCollectionTask()
+//    todoCollectionTask()
+    return this.customers.map { it.city }.count { city.equals(it) }
 }
 
 fun Shop.findAnyCustomerFrom(city: City): Customer? {
     // Return a customer who lives in the given city, or null if there is none
-    todoCollectionTask()
+//    todoCollectionTask()
+    return this.customers.firstOrNull{ it.city.equals(city) }
 }
