@@ -14,7 +14,8 @@ fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer? {
 //    todoCollectionTask()
     // TODO,cannot be reduced ,finger this out later
     //    return this.customers.maxBy { it.orderedProducts.map { it.price }.reduce { product1, product2 -> product1 + product2  } }
-    return this.customers.maxBy { it.costOfOrders }
+//    return this.customers.maxBy { it.costOfOrders }
+    return this.customers.maxBy { it.orders.size }
 //    return this.customers[0].costOfOrders
 
 }
@@ -24,3 +25,5 @@ fun Customer.getMostExpensiveOrderedProduct(): Product? {
 //    todoCollectionTask()
     return this.orders.flatMap { it.products }.maxBy { it.price }
 }
+
+
