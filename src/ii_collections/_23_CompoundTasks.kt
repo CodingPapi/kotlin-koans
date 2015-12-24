@@ -18,6 +18,6 @@ fun Customer.getMostExpensiveDeliveredProduct(): Product? {
 fun Shop.getNumberOfTimesProductWasOrdered(product: Product): Int {
     // Return the number of times the given product was ordered.
     // Note: a customer may order the same product for several times.
-    todoCollectionTask()
-//    return
+//    todoCollectionTask()
+    return customers.flatMap { it.orders }.count { it.products.contains(product) }
 }
