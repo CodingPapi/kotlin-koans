@@ -20,6 +20,10 @@ fun task41(): Nothing = TODO(
         }
 )
 
+//fun <T> List<T>.partitionTo(): Pair<Collection<T>,Collection<T>> {
+//
+//}
+
 fun List<String>.partitionWordsAndLines(): Pair<List<String>, List<String>> {
     task41()
 //    return partitionTo(ArrayList<String>(), ArrayList()) { s -> !s.contains(" ") }

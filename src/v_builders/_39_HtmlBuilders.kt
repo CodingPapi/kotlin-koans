@@ -33,7 +33,20 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-            todoTask39()
+//            todoTask39()
+            for (product in products) {
+                tr {
+                    td {
+                        text(product.description)
+                    }
+                    td {
+                        text(product.price)
+                    }
+                    td {
+                        text(product.popularity)
+                    }
+                }
+            }
         }
     }.toString()
 }
