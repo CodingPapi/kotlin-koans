@@ -2,6 +2,7 @@ package v_builders.builders
 
 import util.questions.Answer
 import util.questions.Answer.*
+import util.questions.answers
 
 fun todoTask40(): Nothing = TODO(
     """
@@ -14,9 +15,10 @@ fun todoTask40(): Nothing = TODO(
     """
 )
 
-fun insertAnswerHere(): Nothing = todoTask40()
+fun insertAnswerHere() = {}
 
-fun task40() = linkedMapOf<Int, Answer>(
+fun task40() = answers
+//        linkedMapOf<Int, Answer>(
 /*
 1. In the Kotlin code
         tr {
@@ -32,7 +34,7 @@ fun task40() = linkedMapOf<Int, Answer>(
     b. function declaration
     c. function invocation
  */
-        1 to insertAnswerHere(),
+//        1 to insertAnswerHere(),
 
 /*
 2. In the Kotlin code
@@ -49,7 +51,7 @@ fun task40() = linkedMapOf<Int, Answer>(
   b. argument name
   c. argument value
  */
-        2 to insertAnswerHere(),
+//        2 to insertAnswerHere(),
 
 /*
 3. The block
@@ -62,7 +64,7 @@ from the previous question is:
   c. something mysterious
 
  */
-        3 to insertAnswerHere(),
+//        3 to insertAnswerHere(),
 
 /*
 4. For the code
@@ -84,5 +86,5 @@ which of the following is true:
                   }
             }
  */
-        4 to insertAnswerHere()
-)
+//        4 to insertAnswerHere()
+//)
